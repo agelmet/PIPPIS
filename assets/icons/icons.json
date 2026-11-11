@@ -1,0 +1,16 @@
+{
+ "source": {
+  "kind": "file",
+  "ref": "assets/img/taxi-megara-icon.svg"
+ },
+ "source_md5": "27d8ca6f8bedd0f9e511339482506df8",
+ "version": "6b0a492b",
+ "tile": null,
+ "crop": null,
+ "header": [
+  "inline",
+  "index.html",
+  "5e6a480fd918baf69dc0c190cd644eb7"
+ ],
+ "made": "2026-11-11"
+}
