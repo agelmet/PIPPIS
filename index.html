@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="msvalidate.01" content="B111344056B4F7484DEA53457F44A3C3">
 <!-- advon-en -->
 <link rel="canonical" href="https://taximegara.gr/">
 <link rel="alternate" hreflang="el" href="https://taximegara.gr/">
@@ -11,6 +10,7 @@
 <link rel="alternate" hreflang="x-default" href="https://taximegara.gr/">
 <script>try{localStorage.setItem("txlang","el")}catch(e){}</script>
 <!-- /advon-en -->
+<meta name="msvalidate.01" content="B111344056B4F7484DEA53457F44A3C3">
 <script id="advon-draft-guard">/* Advon: drafts stay out of Google; the real domain is untouched */(function(h){if(/(^|\.)(drafts\.advonmedia\.com|github\.io|netlify\.app)$/.test(h)){var m=document.createElement("meta");m.name="robots";m.content="noindex,nofollow";document.head.appendChild(m)}})(location.hostname)</script>
 <meta property="og:url" content="https://taximegara.gr/">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -152,15 +152,15 @@ html:not(.js) .mt{opacity:1;transform:none}
 .scue{position:absolute;left:50%;bottom:18px;width:26px;height:42px;border:2px solid rgba(255,255,255,.4);border-radius:14px;transform:translateX(-50%);transition:opacity .4s}
 .scue::after{content:"";position:absolute;left:50%;top:8px;width:3px;height:8px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:sc 1.8s infinite}
 @keyframes sc{0%{transform:translateY(0);opacity:1}80%{transform:translateY(14px);opacity:0}100%{opacity:0}}
-@media (max-width:900px){.hero{align-items:flex-end}.hero::before{background:linear-gradient(0deg,rgba(9,11,16,.92) 0%,rgba(9,11,16,.74) 46%,rgba(9,11,16,.08) 78%)}.hero-in{grid-template-columns:1fr;padding-top:120px;gap:26px}.dash{justify-self:start;display:flex;align-items:center;gap:16px;padding:14px 16px;width:auto}.dash-top,.dash p{display:none}.clock{font-size:34px;margin:0}.dash-g{margin:0;padding:0 0 0 16px;border-top:0;border-left:1px solid rgba(255,255,255,.18)}.dash-g b{font-size:24px}.scue{display:none}}
+@media (max-width:900px){.hero{align-items:flex-end}.hero::before{background:linear-gradient(0deg,rgba(9,11,16,.92) 0%,rgba(9,11,16,.74) 46%,rgba(9,11,16,.08) 78%)}.hero-in{grid-template-columns:minmax(0,1fr);padding-top:120px;gap:26px}.dash{justify-self:start;display:flex;align-items:center;gap:16px;padding:14px 16px;width:auto}.dash-top,.dash p{display:none}.clock{font-size:34px;margin:0}.dash-g{margin:0;padding:0 0 0 16px;border-top:0;border-left:1px solid rgba(255,255,255,.18)}.dash-g b{font-size:24px}.scue{display:none}}
 /* proof + ticker */
 .proof{background:var(--asph);color:#fff;border-top:1px solid var(--lined)}
-.proof-in{display:grid;grid-template-columns:repeat(4,1fr)}
+.proof-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
 .pf{padding:28px 24px;border-left:1px solid var(--lined);display:flex;gap:14px;align-items:center;perspective:600px}
 .pf:first-child{border-left:0;padding-left:0}
 .pf b{font:800 40px/1 var(--disp);color:var(--y2);font-variant-numeric:tabular-nums;display:inline-block}
 .pf span{font-size:14px;line-height:1.35;color:rgba(255,255,255,.72)}
-@media (max-width:900px){.proof-in{grid-template-columns:1fr 1fr}.pf{padding:20px 14px}.pf:nth-child(3){border-left:0;padding-left:0}.pf:nth-child(n+3){border-top:1px solid var(--lined)}.pf b{font-size:32px}}
+@media (max-width:900px){.proof-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.pf{padding:20px 14px}.pf:nth-child(3){border-left:0;padding-left:0}.pf:nth-child(n+3){border-top:1px solid var(--lined)}.pf b{font-size:32px}}
 .tick{background:var(--y);color:var(--ink);overflow:hidden;padding:16px 0;position:relative}
 .tick-in{display:flex;width:max-content;animation:tk 48s linear infinite}
 .tick-s{display:flex;align-items:center;transform:skewX(var(--sk,0deg));transition:transform .4s var(--ease)}
@@ -171,7 +171,7 @@ html:not(.js) .mt{opacity:1;transform:none}
 /* areas */
 .areas-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:end}
 .areas-head .lead{margin-top:0}
-.signs{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:64px;perspective:1100px}
+.signs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:64px;perspective:1100px}
 .sign{position:relative;padding-bottom:70px}
 .sign .post{position:absolute;left:50%;bottom:0;width:10px;height:78px;margin-left:-5px;border-radius:3px;background:linear-gradient(90deg,#9AA0A7,#D7DADE 45%,#8C9198)}
 .plate{position:relative;z-index:1;background:#fff;border-radius:16px;padding:8px;box-shadow:var(--sh2);transform-origin:50% 100%}
@@ -187,7 +187,7 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 @media (hover:hover){.sign:hover .plate{transform:rotate(-2deg) translateY(-4px);transition-delay:0s}}
 .beyond{margin-top:38px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;font:600 16px/1.4 var(--body);color:var(--ink2)}
 .beyond em{font-style:normal;color:var(--ink);font-weight:700}
-@media (max-width:900px){.areas-head{grid-template-columns:1fr;gap:20px}.signs{grid-template-columns:1fr 1fr;gap:16px 14px}.sign{padding-bottom:46px}.sign .post{height:52px;width:8px;margin-left:-4px}}
+@media (max-width:900px){.areas-head{grid-template-columns:minmax(0,1fr);gap:20px}.signs{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px 14px}.sign{padding-bottom:46px}.sign .post{height:52px;width:8px;margin-left:-4px}}
 .amb{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
 .amb .cnt{position:absolute;right:-8%;top:-10%;width:60%;opacity:.5;animation:drift 40s ease-in-out infinite alternate}
 .amb .cnt path{fill:none;stroke:rgba(20,23,28,.08);stroke-width:1.2}
@@ -240,7 +240,7 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .map .car path{fill:var(--ink)}
 .map .sea-l{font:600 italic 13px/1 var(--body);fill:rgba(43,90,115,.55);letter-spacing:.12em}
 .map-tag{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-radius:12px;padding:10px 14px;font-size:12.5px;color:var(--ink2);box-shadow:var(--sh1);max-width:calc(100% - 32px)}
-@media (max-width:1000px){.route-grid{grid-template-columns:1fr}.map{min-height:0;aspect-ratio:1000/909}.board{order:2}}
+@media (max-width:1000px){.route-grid{grid-template-columns:minmax(0,1fr)}.map{min-height:0;aspect-ratio:1000/909}.board{order:2}}
 @media (max-width:640px){.map{aspect-ratio:1/1}.map-tag{display:none}.map .pl text{font-size:30px;stroke-width:6px}.map .home text{font-size:34px}.map .pl.dst:not(.act) text{display:none}.map .pl circle{r:9px}.map .sea-l{font-size:24px}.flap .fw span{min-width:19px;height:34px;font-size:21px}}
 /* services */
 .svc-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:start}
@@ -263,7 +263,7 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .js .svc{opacity:0;transform:translateX(40px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
 .js .svc.in{opacity:1;transform:none}
 @media (hover:hover){.svc{transition:background .3s}.svc:hover{background:rgba(255,255,255,.6)}}
-@media (max-width:900px){.svc-grid{grid-template-columns:1fr;gap:34px}.svc-side{position:static}.svc{grid-template-columns:48px 1fr;gap:16px}.ico{width:48px;height:48px}.ico svg{width:44px;height:44px}}
+@media (max-width:900px){.svc-grid{grid-template-columns:minmax(0,1fr);gap:34px}.svc-side{position:static}.svc{grid-template-columns:48px 1fr;gap:16px}.ico{width:48px;height:48px}.ico svg{width:44px;height:44px}}
 .dots{position:absolute;inset:0;z-index:-1;background-image:radial-gradient(rgba(20,23,28,.09) 1px,transparent 1.2px);background-size:26px 26px;-webkit-mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent);mask-image:linear-gradient(180deg,transparent,#000 30%,#000 70%,transparent)}
 /* parcels */
 .parcel{overflow:hidden}
@@ -289,11 +289,11 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .pc-art .zero-s{font:600 13px/1 var(--body);fill:rgba(255,255,255,.6);letter-spacing:.14em}
 .lanes{position:absolute;inset:0;z-index:-1;opacity:.5;background:repeating-linear-gradient(90deg,transparent 0 120px,rgba(255,255,255,.04) 120px 160px);animation:ln 8s linear infinite}
 @keyframes ln{to{background-position:160px 0}}
-@media (max-width:900px){.parcel-grid{grid-template-columns:1fr;gap:40px}}
+@media (max-width:900px){.parcel-grid{grid-template-columns:minmax(0,1fr);gap:40px}}
 /* why */
 .why-head{text-align:center;max-width:820px;margin:0 auto 56px}
 .why-head .lead{margin:18px auto 0}
-.vals{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;perspective:1200px}
+.vals{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;perspective:1200px}
 .val{background:var(--card);border-radius:var(--r);padding:28px 24px 26px;box-shadow:var(--sh1);display:flex;flex-direction:column;position:relative;overflow:hidden;transform-origin:50% 100%}
 .val .vn{font:800 13px/1 var(--disp);letter-spacing:.2em;color:var(--ydk)}
 .val h3{font-size:clamp(28px,2.4vw,34px);margin:14px 0 18px}
@@ -308,8 +308,8 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .vals .val:nth-child(2){transition-delay:.06s}.vals .val:nth-child(3){transition-delay:.12s}.vals .val:nth-child(4){transition-delay:.18s}
 .sweep{position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 40%,rgba(244,185,11,.09) 50%,transparent 60%);background-size:250% 100%;animation:sw 12s ease-in-out infinite}
 @keyframes sw{0%{background-position:130% 0}100%{background-position:-30% 0}}
-@media (max-width:1000px){.vals{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.vals{grid-template-columns:1fr}}
+@media (max-width:1000px){.vals{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media (max-width:560px){.vals{grid-template-columns:minmax(0,1fr)}}
 /* booking */
 .book{background:var(--sand)}
 .book-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
@@ -327,8 +327,8 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .cmp{background:var(--card);border-radius:28px;padding:clamp(22px,3vw,36px);box-shadow:var(--sh2);position:sticky;top:110px}
 .cmp h3{font-size:clamp(26px,2.4vw,32px)}
 .cmp .sub{color:var(--mute);font-size:14.5px;margin:6px 0 22px}
-.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.fd{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.fr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.fd{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;min-width:0}.fd input{min-width:0}
 .fd label{font:600 13px/1 var(--body);color:var(--ink2)}
 .fd input,.fd textarea{width:100%;font:500 16px/1.3 var(--body);color:var(--ink);background:var(--paper);border:1.5px solid transparent;border-radius:14px;padding:14px 15px;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
 .fd input:focus,.fd textarea:focus{outline:none;border-color:var(--ink);background:#fff}
@@ -341,14 +341,14 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .stp{display:flex;align-items:center;gap:6px;background:var(--paper);border-radius:14px;padding:5px}
 .stp button{width:44px;height:44px;border-radius:10px;background:#fff;font:700 20px/1 var(--body);box-shadow:var(--sh1)}
 .stp output{flex:1;text-align:center;font:800 24px/1 var(--disp);font-variant-numeric:tabular-nums}
-.cmp-act{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:8px}
+.cmp-act{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:8px}
 .cmp-act .btn{justify-content:center;padding:0 12px;font-size:14.5px;min-height:52px}
 .wa{background:#1F9E54;color:#fff}
 .cmp-note{font-size:12.5px;color:var(--mute);margin-top:14px}
 .cmp-or{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--ink2)}
 .cmp-or a{font-weight:700;color:var(--ink);border-bottom:2px solid var(--y)}
-@media (max-width:1000px){.book-grid{grid-template-columns:1fr;gap:40px}.cmp{position:static}}
-@media (max-width:560px){.cmp-act{grid-template-columns:1fr}.fr{grid-template-columns:1fr 1fr;gap:10px}}
+@media (max-width:1000px){.book-grid{grid-template-columns:minmax(0,1fr);gap:40px}.cmp{position:static}}
+@media (max-width:560px){.cmp-act{grid-template-columns:minmax(0,1fr)}.fr{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}}
 /* reviews */
 .rev-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:24px;margin-bottom:44px}
 .gcard{display:flex;align-items:center;gap:18px;background:var(--card);border-radius:20px;padding:16px 22px;box-shadow:var(--sh1)}
@@ -396,7 +396,7 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .qa[open] .ans{animation:ans .45s var(--ease)}
 @keyframes ans{from{opacity:0;transform:translateY(-8px)}}
 @media (hover:hover){.qa summary span{transition:transform .3s var(--ease)}.qa summary:hover span{transform:translateX(4px)}}
-@media (max-width:900px){.faq-grid{grid-template-columns:1fr;gap:30px}.faq-side{position:static}.qa .ans{padding-right:0}}
+@media (max-width:900px){.faq-grid{grid-template-columns:minmax(0,1fr);gap:30px}.faq-side{position:static}.qa .ans{padding-right:0}}
 /* contact */
 .contact{overflow:hidden;border-radius:44px 44px 0 0;margin-top:-44px}
 .contact .glow{position:absolute;z-index:-1;width:900px;height:900px;left:50%;top:-450px;margin-left:-450px;border-radius:50%;background:radial-gradient(closest-side,rgba(244,185,11,.16),transparent);animation:gl 9s ease-in-out infinite alternate}
@@ -406,12 +406,12 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 @media (hover:hover){.ct-num:hover{color:var(--y)}}
 .ct-sub{color:rgba(255,255,255,.7);font-size:17px}
 .ct-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:34px}
-.ct-list{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:70px;border-top:1px solid var(--lined);text-align:left}
+.ct-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:70px;border-top:1px solid var(--lined);text-align:left}
 .ct-list>div{padding:26px 22px;border-left:1px solid var(--lined)}
 .ct-list>div:first-child{border-left:0}
 .ct-list small{display:block;font:600 12px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--y2);margin-bottom:10px}
 .ct-list a,.ct-list p{font-size:15.5px;color:rgba(255,255,255,.86);word-break:break-word}
-@media (max-width:900px){.ct-list{grid-template-columns:1fr 1fr}.ct-list>div:nth-child(3){border-left:0}.ct-list>div:nth-child(n+3){border-top:1px solid var(--lined)}.contact{border-radius:30px 30px 0 0}}
+@media (max-width:900px){.ct-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.ct-list>div:nth-child(3){border-left:0}.ct-list>div:nth-child(n+3){border-top:1px solid var(--lined)}.contact{border-radius:30px 30px 0 0}}
 /* footer */
 .ft{background:var(--asph);color:rgba(255,255,255,.7);padding:46px 0 120px;font-size:14px;border-top:1px solid var(--lined)}
 .ft-in{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
@@ -424,7 +424,7 @@ html:not(.js) .sign .plate{transform:none;opacity:1}
 .adv{font-weight:800;letter-spacing:.01em;color:#47C8F5;background:linear-gradient(100deg,#47C8F5 0%,#47C8F5 32%,#8BE0FC 44%,#E3F8FF 50%,#8BE0FC 56%,#47C8F5 68%,#47C8F5 100%);background-size:260% 100%;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 0 6px rgba(71,200,245,.38));animation:advShine 3.8s ease-in-out infinite}
 @keyframes advShine{0%{background-position:100% 0}62%,100%{background-position:0 0}}
 /* mobile bar */
-.mbar{position:fixed;left:10px;right:10px;bottom:10px;z-index:40;display:none;grid-template-columns:1fr 1fr 1fr;gap:6px;padding:6px;border-radius:20px;background:rgba(14,17,21,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--sh3);transform:translateY(130%);transition:transform .5s var(--ease)}
+.mbar{position:fixed;left:10px;right:10px;bottom:10px;z-index:40;display:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:6px;border-radius:20px;background:rgba(14,17,21,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--sh3);transform:translateY(130%);transition:transform .5s var(--ease)}
 .mbar.on{transform:none}
 .mbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:54px;border-radius:14px;color:#fff;font:600 12.5px/1 var(--body)}
 .mbar a svg{width:20px;height:20px}
@@ -465,7 +465,7 @@ html:not(.js) .fade{opacity:1;transform:none}
 .zz *{animation-play-state:paused!important}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "LocalBusiness", "@id": "https://taximegara.gr/#taxi", "name": "Ταξί Μέγαρα - Τάσος Πιππής", "alternateName": ["Taxi Megara - Tasos Pippis", "ΤΑΞΙ ΜΕΓΑΡΑ"], "description": "Ταξί στα Μέγαρα 24 ώρες το 24ωρο: τοπικές διαδρομές σε Μέγαρα, Νέα Πέραμο, Κινέτα και Αλεποχώρι, μεταφορές στο αεροδρόμιο Ελ. Βενιζέλος, στο λιμάνι του Πειραιά και σε σταθμούς, εντός και εκτός Αττικής, και ασυνόδευτα δέματα και αλληλογραφία.", "url": "https://taximegara.gr/", "image": "https://taximegara.gr/assets/img/taxi-megara-tasos-pippis-og.jpg", "logo": "https://taximegara.gr/assets/icons/icon-512.png", "telephone": "+30 697 585 7598", "email": "tasospippis@gmail.com", "address": {"@type": "PostalAddress", "addressLocality": "Μέγαρα", "postalCode": "191 00", "addressRegion": "Αττική", "addressCountry": "GR"}, "geo": {"@type": "GeoCoordinates", "latitude": 37.99604, "longitude": 23.34399}, "hasMap": "https://www.google.com/maps?cid=6661633470001809921", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}], "areaServed": [{"@type": "City", "name": "Μέγαρα"}, {"@type": "City", "name": "Νέα Πέραμος"}, {"@type": "City", "name": "Κινέτα"}, {"@type": "City", "name": "Αλεποχώρι"}, {"@type": "City", "name": "Ελευσίνα"}, {"@type": "City", "name": "Αθήνα"}, {"@type": "City", "name": "Πειραιάς"}], "knowsAbout": ["Ταξί Μέγαρα", "Μεταφορά στο αεροδρόμιο Ελ. Βενιζέλος", "Μεταφορά στο λιμάνι του Πειραιά", "Μεταφορά σε σταθμούς τρένων και ΚΤΕΛ", "Διαδρομές εκτός Αττικής", "Ασυνόδευτα δέματα και αλληλογραφία"], "availableLanguage": ["el", "en"], "sameAs": ["https://www.google.com/maps?cid=6661633470001809921", "https://www.facebook.com/tasos.pippakos"], "founder": {"@id": "https://taximegara.gr/#tasos"}}, {"@type": "TaxiService", "@id": "https://taximegara.gr/#service", "name": "Ταξί Μέγαρα 24/7", "provider": {"@id": "https://taximegara.gr/#taxi"}, "areaServed": "Δήμος Μεγαρέων, Αττική", "serviceType": "Ταξί"}, {"@type": "Person", "@id": "https://taximegara.gr/#tasos", "name": "Τάσος Πιππής", "alternateName": ["Αναστάσιος Πιππής", "Tasos Pippis"], "jobTitle": "Οδηγός ταξί", "worksFor": {"@id": "https://taximegara.gr/#taxi"}, "sameAs": ["https://www.facebook.com/tasos.pippakos"]}, {"@type": "WebSite", "@id": "https://taximegara.gr/#site", "url": "https://taximegara.gr/", "name": "Ταξί Μέγαρα - Τάσος Πιππής", "alternateName": ["Taxi Megara", "taximegara.gr"], "inLanguage": "el"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Είσαι διαθέσιμος όλο το 24ωρο;", "acceptedAnswer": {"@type": "Answer", "text": "Ναι. Η εξυπηρέτηση είναι 24 ώρες το 24ωρο, κάθε μέρα. Για πολύ πρωινές ή βραδινές διαδρομές καλό είναι να κλείνεις από πριν, ώστε να είναι όλα κανονισμένα."}}, {"@type": "Question", "name": "Ποιες περιοχές εξυπηρετείς;", "acceptedAnswer": {"@type": "Answer", "text": "Τον Δήμο Μεγαρέων: Μέγαρα, Νέα Πέραμο, Κινέτα, Αλεποχώρι και τα γύρω χωριά. Από εκεί σε πηγαίνουμε όπου χρειαστείς, εντός και εκτός Αττικής."}}, {"@type": "Question", "name": "Πώς κλείνω ταξί για το αεροδρόμιο;", "acceptedAnswer": {"@type": "Answer", "text": "Κάλεσε στο 697 585 7598 ή στείλε μήνυμα στο WhatsApp με τη μέρα, την ώρα της πτήσης και το σημείο παραλαβής. Σε καλούμε για επιβεβαίωση και σε παίρνουμε από την πόρτα σου."}}, {"@type": "Question", "name": "Πόσο νωρίς πρέπει να κλείσω;", "acceptedAnswer": {"@type": "Answer", "text": "Όσο νωρίτερα, τόσο καλύτερα — ιδίως για πτήσεις και πλοία νωρίς το πρωί. Αν χρειάζεσαι ταξί τώρα, απλώς κάλεσε."}}, {"@type": "Question", "name": "Κάνεις διαδρομές εκτός Αττικής;", "acceptedAnswer": {"@type": "Answer", "text": "Ναι. Για διαδρομές εκτός Αττικής — Κόρινθο, Λουτράκι, Πελοπόννησο ή πιο μακριά — συνεννοούμαστε από πριν για την ώρα και τη διαδρομή."}}, {"@type": "Question", "name": "Μπορείς να μεταφέρεις δέμα χωρίς επιβάτη;", "acceptedAnswer": {"@type": "Answer", "text": "Ναι. Ασυνόδευτα δέματα και αλληλογραφία πηγαίνουν κατευθείαν από τον αποστολέα στον παραλήπτη, χωρίς ενδιάμεσους σταθμούς — ιδανικό για έγγραφα, μικροδέματα και επείγουσες αποστολές."}}, {"@type": "Question", "name": "Από πού με παραλαμβάνεις;", "acceptedAnswer": {"@type": "Answer", "text": "Από όποιο σημείο μας πεις: σπίτι, δουλειά, σταθμό, λιμάνι ή αεροδρόμιο."}}, {"@type": "Question", "name": "Μπορώ να στείλω μήνυμα αντί να τηλεφωνήσω;", "acceptedAnswer": {"@type": "Answer", "text": "Ναι. Γράψε στο WhatsApp ή στο tasospippis@gmail.com — ή συμπλήρωσε τη φόρμα κράτησης σε αυτή τη σελίδα και το μήνυμα ανοίγει έτοιμο στο κινητό σου."}}]}]}</script>
-<script type="application/ld+json" id="advon-webpage">{"@context":"https://schema.org","@type":"WebPage","@id":"https://taximegara.gr/#webpage","url":"https://taximegara.gr/","name":"Ταξί Μέγαρα | Τάσος Πιππής — οδηγός ταξί 24/7, αεροδρόμιο","inLanguage":"el","dateModified":"2026-11-12","description":"Ταξί στα Μέγαρα 24 ώρες το 24ωρο: Νέα Πέραμος, Κινέτα, Αλεποχώρι, αεροδρόμιο, λιμάνι Πειραιά, σταθμοί και δέματα. Τάσος Πιππής, 697 585 7598.","isPartOf":{"@id":"https://taximegara.gr/#site"},"about":{"@id":"https://taximegara.gr/#taxi"}}</script>
+<script type="application/ld+json" id="advon-webpage">{"@context":"https://schema.org","@type":"WebPage","@id":"https://taximegara.gr/#webpage","url":"https://taximegara.gr/","name":"Ταξί Μέγαρα | Τάσος Πιππής — οδηγός ταξί 24/7, αεροδρόμιο","inLanguage":"el","dateModified":"2026-11-14","description":"Ταξί στα Μέγαρα 24 ώρες το 24ωρο: Νέα Πέραμος, Κινέτα, Αλεποχώρι, αεροδρόμιο, λιμάνι Πειραιά, σταθμοί και δέματα. Τάσος Πιππής, 697 585 7598.","isPartOf":{"@id":"https://taximegara.gr/#site"},"about":{"@id":"https://taximegara.gr/#taxi"}}</script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
